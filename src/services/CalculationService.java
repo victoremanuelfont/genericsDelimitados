@@ -9,7 +9,7 @@ public class CalculationService {
 	 * que o tipo T é do tipo comparable <T extends Comparable<T>.
 	 */
 
-	public static <T extends Comparable<T>> T max(List<T> list) {
+	public static <T extends Comparable<? super T>> T max(List<T> list) {
 		if (list.isEmpty()) {
 			throw new IllegalStateException("List can't be empty");
 		}
